@@ -1,0 +1,221 @@
+:root {
+  --medium-color: #222222;
+  --stroke-color: rgba(34, 34, 34, 1);
+  --color-text-accent: rgba(249, 246, 245, 1);
+  --color-back-accent: rgba(64, 47, 44, 1);
+  --color-hero-back: rgba(249, 246, 245, 1);
+  --color-input: rgba(153, 153, 153, 1);
+  --main-color-text: rgba(85, 85, 85, 1);
+  --link-color-hover: #0c0c0c;
+  --btn-color-hover: rgb(85, 62, 58);
+  --input-color-hover: rgb(215 215 215);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 1.25;
+}
+
+/* HEADER */
+
+header {
+  position: absolute;
+  width: 100%;
+}
+
+.container {
+  width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--medium-color);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  transition: text-shadow 0.3s linear;
+}
+
+.logo:after {
+  content: '';
+  display: block;
+  height: 2px;
+  background-color: var(--medium-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  padding: 40px 0;
+  display: block;
+  color: var(--medium-color);
+  font-size: 16px;
+  transition: text-shadow 0.3s linear;
+}
+
+nav a:hover,
+nav a:focus,
+.logo:hover,
+.logo:focus {
+  text-shadow: 0 1px 2px var(--link-color-hover);
+}
+
+.external-links {
+  display: flex;
+  gap: 24px;
+}
+
+.external-links li svg {
+  width: 24px;
+  height: 24px;
+  fill: transparent;
+  stroke: var(--stroke-color);
+  stroke-width: 1.5px;
+  transition: stroke-width 0.3s linear;
+}
+
+.external-links a:hover svg,
+.external-links a:focus svg {
+  stroke-width: 2px;
+}
+
+/* HERO */
+
+.hero {
+  padding: 178px 0 109px;
+  background-color: var(--color-hero-back);
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.hero-content {
+  width: 621px;
+  position: relative;
+}
+.hero h1 {
+  font-weight: 500;
+  font-size: 56px;
+  margin-bottom: 30px;
+}
+.hero p {
+  width: 516px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--main-color-text);
+}
+
+.form-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.form-search input {
+  width: 326px;
+  padding: 14px 8px 14px 16px;
+  color: var(--color-input);
+  font-size: 14px;
+  line-height: 1.4;
+  border: none;
+  background-color: var(--color-text-accent);
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+}
+.form-search button {
+  width: 32px;
+  height: 32px;
+  margin-left: -40px;
+  padding: 8px;
+  background-color: var(--color-back-accent);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s linear;
+}
+.form-search svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-text-accent);
+}
+
+.form-search input:hover,
+.form-search input:focus {
+  background-color: var(--input-color-hover);
+}
+.form-search button:hover,
+.form-search button:focus {
+  background-color: var(--btn-color-hover);
+}
+
+.btn {
+  display: block;
+  width: 148px;
+  padding: 16px 32px;
+  background-color: var(--color-back-accent);
+  color: var(--color-text-accent);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.3;
+  transition: background-color 0.3s linear;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-color-hover);
+}
+
+.arrow-list {
+  padding: 49px 24px;
+  background-color: var(--color-hero-back);
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  right: 0;
+  bottom: -109px;
+}
+.arrow-list button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.arrow-list svg {
+  width: 40px;
+  height: 40px;
+  fill: transparent;
+  stroke: var(--stroke-color);
+  stroke-width: 1px;
+  transition: stroke-width 0.3s linear;
+}
+.arrow-list button:hover svg,
+.arrow-list button:focus svg {
+  stroke-width: 2px;
+}
