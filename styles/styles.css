@@ -4,7 +4,7 @@
   --color-text-accent: rgba(249, 246, 245, 1);
   --color-back-accent: rgba(64, 47, 44, 1);
   --color-hero-back: rgba(249, 246, 245, 1);
-  --color-input: rgba(153, 153, 153, 1);
+  --color-input: rgba(255, 255, 255, 1);
   --main-color-text: rgba(85, 85, 85, 1);
   --link-color-hover: #0c0c0c;
   --btn-color-hover: rgb(85, 62, 58);
@@ -113,17 +113,17 @@ nav a:focus,
 /* HERO */
 
 .hero {
-  padding: 178px 0 109px;
+  padding-top: 178px;
   background-color: var(--color-hero-back);
+}
+.hero-content {
+  position: relative;
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-position: right;
 }
-.hero-content {
-  width: 621px;
-  position: relative;
-}
 .hero h1 {
+  width: 621px;
   font-weight: 500;
   font-size: 56px;
   margin-bottom: 30px;
@@ -137,9 +137,9 @@ nav a:focus,
 }
 
 .form-search {
-  display: flex;
-  align-items: center;
   margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
 }
 .form-search input {
   width: 326px;
@@ -148,14 +148,16 @@ nav a:focus,
   font-size: 14px;
   line-height: 1.4;
   border: none;
-  background-color: var(--color-text-accent);
+  background-color: var(--color-input);
   cursor: pointer;
   transition: background-color 0.3s linear;
 }
 .form-search button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   width: 32px;
   height: 32px;
-  margin-left: -40px;
   padding: 8px;
   background-color: var(--color-back-accent);
   border: none;
@@ -177,7 +179,7 @@ nav a:focus,
   background-color: var(--btn-color-hover);
 }
 
-.btn {
+.link-btn {
   display: block;
   width: 148px;
   padding: 16px 32px;
@@ -188,24 +190,26 @@ nav a:focus,
   line-height: 1.3;
   transition: background-color 0.3s linear;
 }
-.btn:hover,
-.btn:focus {
+.link-btn:hover,
+.link-btn:focus {
   background-color: var(--btn-color-hover);
 }
 
 .arrow-list {
-  padding: 49px 24px;
-  background-color: var(--color-hero-back);
   display: flex;
-  gap: 16px;
-  position: absolute;
-  right: 0;
-  bottom: -109px;
+  justify-content: center;
 }
 .arrow-list button {
   border: none;
   background: none;
   cursor: pointer;
+  background-color: var(--color-hero-back);
+}
+.arrow-left{
+  padding: 49px 16px 49px 24px;
+}
+.arrow-right{
+  padding: 49px 24px 49px 0;
 }
 .arrow-list svg {
   width: 40px;
