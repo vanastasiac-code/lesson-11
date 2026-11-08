@@ -113,14 +113,14 @@ nav a:focus,
 /* HERO */
 
 .hero {
-  padding-top: 178px;
+  padding-top: 138px;
   background-color: var(--color-hero-back);
 }
 .hero-content {
   position: relative;
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: 117% bottom;
 }
 .hero h1 {
   width: 621px;
@@ -143,7 +143,7 @@ nav a:focus,
 }
 .form-search input {
   width: 326px;
-  padding: 14px 8px 14px 16px;
+  padding: 14px 40px 14px 16px;
   color: var(--color-input);
   font-size: 14px;
   line-height: 1.4;
@@ -196,19 +196,23 @@ nav a:focus,
 }
 
 .arrow-list {
-  display: flex;
+  background-color: var(--color-hero-back);
+  position: relative;
+  left: 44%;
+  display: inline-flex;
+  gap: 16px;
   justify-content: center;
+  margin-top: -40px;
 }
 .arrow-list button {
   border: none;
   background: none;
   cursor: pointer;
-  background-color: var(--color-hero-back);
 }
-.arrow-left{
-  padding: 49px 16px 49px 24px;
+.arrow-left {
+  padding: 49px 0px 49px 24px;
 }
-.arrow-right{
+.arrow-right {
   padding: 49px 24px 49px 0;
 }
 .arrow-list svg {
