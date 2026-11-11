@@ -41,6 +41,7 @@ body {
 
 header {
   position: absolute;
+  z-index: 100;
   width: 100%;
 }
 
@@ -115,12 +116,14 @@ nav a:focus,
 .hero {
   padding-top: 138px;
   background-color: var(--color-hero-back);
-}
-.hero-content {
-  position: relative;
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
-  background-position: 117% bottom;
+  background-position: 100% bottom;
+}
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
 }
 .hero h1 {
   width: 621px;
